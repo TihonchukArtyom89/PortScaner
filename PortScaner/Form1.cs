@@ -34,7 +34,11 @@ namespace PortScaner
         }
         private void btn_scan_Click(object sender, EventArgs e)
         {
-            int BeginPort = Convert.ToInt32(begin_port),EndPort = Convert.ToInt32(end_port),i;
+            begin_port.Maximum = 65536;
+            end_port.Maximum = 65536;
+            begin_port.Minimum = 0;
+            end_port.Minimum = 0;
+            int BeginPort = Convert.ToInt32(begin_port.Value),EndPort = Convert.ToInt32(end_port.Value),i;
             progressBar.Maximum = EndPort = BeginPort + 1;
             progressBar.Value = 0;
             listView.Items.Clear();

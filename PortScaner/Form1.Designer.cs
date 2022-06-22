@@ -105,6 +105,11 @@ namespace PortScaner
             // begin_port
             // 
             this.begin_port.Location = new System.Drawing.Point(320, 26);
+            this.begin_port.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
             this.begin_port.Name = "begin_port";
             this.begin_port.Size = new System.Drawing.Size(134, 20);
             this.begin_port.TabIndex = 7;
