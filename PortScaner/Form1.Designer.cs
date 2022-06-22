@@ -33,13 +33,13 @@ namespace PortScaner
             this.label2 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.btn_scan = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.listView = new System.Windows.Forms.ListView();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.tIPAddress = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.begin_port = new System.Windows.Forms.NumericUpDown();
+            this.end_port = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.begin_port)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.end_port)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl1
@@ -54,7 +54,7 @@ namespace PortScaner
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(273, 31);
+            this.label2.Location = new System.Drawing.Point(262, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 1;
@@ -77,22 +77,23 @@ namespace PortScaner
             this.btn_scan.TabIndex = 3;
             this.btn_scan.Text = "Сканировать";
             this.btn_scan.UseVisualStyleBackColor = true;
+            this.btn_scan.Click += new System.EventHandler(this.btn_scan_Click);
             // 
-            // listView1
+            // listView
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 59);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(776, 473);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView.HideSelection = false;
+            this.listView.Location = new System.Drawing.Point(12, 59);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(776, 473);
+            this.listView.TabIndex = 4;
+            this.listView.UseCompatibleStateImageBehavior = false;
             // 
-            // progressBar1
+            // progressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 552);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(776, 23);
-            this.progressBar1.TabIndex = 5;
+            this.progressBar.Location = new System.Drawing.Point(12, 552);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(776, 23);
+            this.progressBar.TabIndex = 5;
             // 
             // tIPAddress
             // 
@@ -101,38 +102,38 @@ namespace PortScaner
             this.tIPAddress.Size = new System.Drawing.Size(145, 20);
             this.tIPAddress.TabIndex = 6;
             // 
-            // numericUpDown1
+            // begin_port
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(320, 26);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 7;
+            this.begin_port.Location = new System.Drawing.Point(320, 26);
+            this.begin_port.Name = "begin_port";
+            this.begin_port.Size = new System.Drawing.Size(134, 20);
+            this.begin_port.TabIndex = 7;
             // 
-            // numericUpDown2
+            // end_port
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(498, 26);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 8;
+            this.end_port.Location = new System.Drawing.Point(485, 26);
+            this.end_port.Name = "end_port";
+            this.end_port.Size = new System.Drawing.Size(137, 20);
+            this.end_port.TabIndex = 8;
             // 
             // main_win_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 587);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.end_port);
+            this.Controls.Add(this.begin_port);
             this.Controls.Add(this.tIPAddress);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.btn_scan);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl1);
             this.Name = "main_win_form";
             this.Text = "PortScanner";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.begin_port)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.end_port)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,11 +145,11 @@ namespace PortScaner
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Button btn_scan;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.TextBox tIPAddress;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown begin_port;
+        private System.Windows.Forms.NumericUpDown end_port;
     }
 }
 
