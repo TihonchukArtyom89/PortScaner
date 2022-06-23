@@ -1,3 +1,3 @@
 # PortScaner
-simple port scanner
-not working
+simple port scanner in thisrepo not properly working
+
